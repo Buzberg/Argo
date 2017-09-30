@@ -50,7 +50,7 @@ public func decode<T: Decodable>(_ object: Any) -> Decoded<T> where T == T.Decod
   - returns: A `Decoded<[T]>` value where `T` is `Decodable`
 */
 public func decode<T: Decodable>(_ object: Any) -> Decoded<[T]> where T == T.DecodedType {
-  return Array<T>.decode(Value(object))
+  return [T].decode(Value(object))
 }
 
 /**
