@@ -43,8 +43,8 @@ class TypeTests: XCTestCase {
   }
 
   func testBooleanIdentification() {
-    let j = json(fromFile: "booleans").map(JSON.init)!
-    let boolean: JSON? = (j <| "realBool").value
+    let j = json(fromFile: "booleans").map(Value.init)!
+    let boolean: Value? = (j <| "realBool").value
     XCTAssert(boolean == .bool(true))
   }
 }
